@@ -16,10 +16,10 @@ public class UserController {
 
     @GetMapping
         public List<User> getAllUsers() {
-            return userRepository.findAll();
+        return userRepository.findAll();
         }
     @PostMapping
         public User createUser(@RequestBody User user) {
-            return userRepository.save(user);
-        }
+        return userRepository.save(user);
+    }
 }
