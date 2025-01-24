@@ -17,6 +17,7 @@ public class UserController {
 
     @GetMapping
     public String showAllUsers(Model model) {
+        System.out.println("Metoda została wywołana");
         model.addAttribute("allUsers", userRepository.findAll());
         return "users";
     }
