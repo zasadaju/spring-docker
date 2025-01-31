@@ -1,18 +1,23 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from './views/HomeView.vue';
-import UsersView from  './views/UsersView.vue';
+import UsersView from './views/UsersView.vue';
 import AboutView from './views/AboutView.vue';
-import UserDetails from './components/UserDetails.vue';
+import UserDetails from './views/UserDetails.vue';
 
+
+
+
+//Definicja tras
 const routes = [
-    {path:'/', component: HomeView},
-    {path:'/users', component: UsersView},
-    {path:'/users/:id', component: UserDetails},
-    {path:'/about', component: AboutView},
+    { path:'/', component: HomeView },
+    { path:'/users', component: UsersView },
+    { path: '/users/:id', component: UserDetails },
+    { path:'/about', component: AboutView },
 ];
 
+//Tworzenie routera
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(), 
     routes
 });
 
