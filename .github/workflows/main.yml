@@ -18,11 +18,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build Maven
-        run: mvn clean package --file backend/pom.xml
+      # - name: Build Maven
+      #   run: mvn clean package --file backend/pom.xml
 
-      - name: Run Docker Compose
-        run: docker compose up -d
+      # - name: Run Docker Compose
+      #   run: docker compose up -d
         
       - name: Accept Host Key
         run: |
@@ -45,5 +45,6 @@ jobs:
             cd backend
             mvn clean package
             docker build --rm -t spring-mongodb-image -f Dockerfile .
+            cd ..
             docker compose down
             docker compose up -d --build
