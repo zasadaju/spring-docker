@@ -1,13 +1,17 @@
 <template>
-  <div>
-      <NavbarComponent />
-      <router-view></router-view>
-  </div>
+    <div>
+        <NavbarComponent />
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-  import NavbarComponent from './components/NavbarComponent.vue';
-  export default {
-      components: { NavbarComponent }
-  };
+    import NavbarComponent from './components/NavbarComponent.vue';
+    export default {
+        components: { NavbarComponent }
+    };
 </script>
+
+
+
+
