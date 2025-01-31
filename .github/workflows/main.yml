@@ -17,13 +17,13 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      
+
       - name: Build Maven
         run: mvn clean package --file pom.xml
 
       - name: Run Docker Compose
         run: docker compose up -d
-
+        
       - name: Accept Host Key
         run: |
           mkdir -p ~/.ssh
@@ -43,5 +43,6 @@ jobs:
             cd projekt-spring-boot-2/spring-docker/
             git pull origin main
             mvn clean package
-            docker build -rm -t spring-mongodb-image .
-            docker compose up -d --build
+            docker build --rm -t spring-mongodb-image .
+            docker compose down
+            docker compose up -d --build      
