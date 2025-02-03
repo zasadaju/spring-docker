@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>Lista użytkowników - zmiana z 31.01.2025</h1>
+    <h1>Lista użytkowników / edit</h1>
 <!-- Tabela użytkowników -->
     <table>
         <thead>
@@ -15,13 +15,15 @@
                 <th>Id</th>
                 <th>Imię</th>
                 <th>Email</th>
+                <th>Tel</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="user : ${allUsers}">
-                <td th:text="${user.id}"}></td>
+                <td th:text="${user.id}"></td>
                 <td th:text="${user.name}"></td>
                 <td th:text="${user.email}"></td>
+                <td th:text="${user.tel}"></td>
                 <td>
                     <a th:href="@{'users/edit/' + ${user.id}}">Edytuj</a>
                 </td>
@@ -41,6 +43,8 @@
         <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" required>
+        <label for="tel">Tel</label>
+        <input type="text" id="tel" name="tel" required>
         <br>
         <button type="submit">Dodaj użytkownika</button>
     </form>
