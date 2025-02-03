@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
         private String id;
         private String name;
         private String email;
+        private String tel;
 
 
         public User() {
@@ -35,6 +36,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
             return email;
         }
 
+        public String getTel() {
+            return tel;
+        }
+
         //Settery
         public void setId(String id) {
             this.id = id;
@@ -46,6 +51,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
         public void setEmail(String email) {
             this.email = email;
+        }
+
+        public void setTel(String tel) {
+            this.tel = tel;
         }
     }
 
