@@ -40,7 +40,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             ls -lah
-            cd projekt-spring-boot-2/
+            cd projekt-spring-boot-2/spring-boot/backend
             git pull origin main
             cd backend
             mvn clean package
